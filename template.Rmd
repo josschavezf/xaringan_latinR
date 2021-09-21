@@ -42,7 +42,7 @@ Recomendamos usar el paquete [viridis](https://cran.r-project.org/web/packages/v
 Veamos cómo lucen algunas gráficas con diversos tipos de dificultades visuales usando [colorblindr](https://github.com/clauswilke/colorblindr):
 
 ```{r, echo=FALSE, message=FALSE}
-library(palmerpenguins)
+library(datos)
 library(ggplot2)
 library(colorblindr)
 library(viridis)
@@ -51,8 +51,8 @@ library(viridis)
 ---
 class: middle, center
 
-```{r,echo=FALSE,warning=FALSE,message=FALSE,fig.show="hold",out.width="50%"}
-fig <- ggplot(penguins, aes(body_mass_g, fill = species)) + 
+```{r,echo=FALSE,warning=FALSE,message=FALSE,fig.show="hold",out.width="50%",fig.alt= "Se muestran gráficas de densidad con los datos de la masa corporal de pinguinos de las especies Adelie, Chinstrap y Gentoo del conjunto de datos pinguinos del paquete en español datos, separados por color de acuerdo con la especie, usando la escala de color automática de ggplot2. En la columna izquierda se están utilizando los colores rosa, verde y azul. En la columna derecha se muestra la simulación de cómo se vería la gráfica de la izquierda considerando cuatro deficiencias visuales: Deutanomalía,Protanomalía, Tritanomalía y Desaturado."}
+fig <- ggplot(pinguinos, aes(masa_corporal_g, fill = especie)) + 
   geom_density(alpha = 0.7) + 
   theme_bw(base_size = 30) + 
   theme(legend.position = c(0.8, 0.89),
@@ -60,7 +60,7 @@ fig <- ggplot(penguins, aes(body_mass_g, fill = species)) +
         legend.title = element_blank()) 
 
 fig
-cvd_grid(ggplot(penguins, aes(body_mass_g, fill = species)) + 
+cvd_grid(ggplot(pinguinos, aes(masa_corporal_g, fill = especie)) + 
            geom_density(alpha = 0.7) +  
            theme_bw(base_size = 18) +
            theme(legend.position = c(0.7, 0.85),
@@ -77,8 +77,8 @@ cvd_grid(ggplot(penguins, aes(body_mass_g, fill = species)) +
 
 Ahora usemos colores más amigables con scale_fill_viridis()
 
-```{r,echo=FALSE,warning=FALSE,message=FALSE,fig.show="hold",out.width="50%"}
-fig2 <- ggplot(penguins, aes(body_mass_g, fill = species)) + 
+```{r,echo=FALSE,warning=FALSE,message=FALSE,fig.show="hold",out.width="50%",fig.alt="Se muestran gráficas de densidad con los datos de la masa corporal de pinguinos de las especies Adelie, Chinstrap y Gentoo del conjunto de datos pinguinos del paquete en español datos separados por color de acuerdo con la especie, con ayuda de la escala viridis. En la columna izquierda se están utilizando los colores morado, esmeralda y amarillo. En la columna derecha se muestra la simulación de cómo se vería la gráfica de la izquierda considerando cuatro deficiencias visuales: Deutanomalía,Protanomalía, Tritanomalía y Desaturado."}
+fig2 <- ggplot(pinguinos, aes(masa_corporal_g, fill = especie)) + 
   geom_density(alpha = 0.7) + 
   theme_bw(base_size = 30) + 
   theme(legend.position = c(0.8, 0.89),
@@ -87,7 +87,7 @@ fig2 <- ggplot(penguins, aes(body_mass_g, fill = species)) +
   scale_fill_viridis(discrete = TRUE)
 
 fig2
-cvd_grid(ggplot(penguins, aes(body_mass_g, fill = species)) + 
+cvd_grid(ggplot(pinguinos, aes(masa_corporal_g, fill = especie)) + 
            geom_density(alpha = 0.7) +  
            theme_bw(base_size = 18) +
            theme(legend.position = c(0.7, 0.85),
@@ -99,3 +99,10 @@ cvd_grid(ggplot(penguins, aes(body_mass_g, fill = species)) +
 )
 ```
 
+---
+
+# Alt-text
+
+Recuerda agregar texto alternativo a tus figuras, describiendo los elementos que contienen y el mensaje que deseas transmitir con ellas.
+
+Puedes usar la opción fig.alt del chunk de R para agregar el texto alternativo.
