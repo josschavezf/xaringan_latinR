@@ -4,24 +4,28 @@
   background-size: 70px, cover ;
   font-size: 24pt;
   color: #000000;
+  font-family: Sans-Serif;
 }
 
 .remark-slide-content h1 {
   color: #5542FF;
   font-weight: bold;
   font-size: 34pt;
+  font-family: Sans-Serif;
 }
 
 .remark-slide-content h2{
   color: #5542FF;
   font-weight: bold;
   font-size: 32pt;
+  font-family: Sans-Serif;
 }
 
 .remark-slide-content h3 {
   color: #5542FF;
   font-weight: bold;
   font-size: 30pt;
+  font-family: Sans-Serif;
 }
 
 
@@ -29,6 +33,7 @@
   background-image: url('./LatinR_LOGOS-23.png'), linear-gradient(to bottom, #ECECEC 1%, rgba(236, 236, 236) 20%)  ;
   background-position: 3% 3%, 100% 100% ;
   background-size: 250px, 100% 81% ;
+  font-family: Sans-Serif;
 }
 
 .title-slide h1 {
@@ -36,24 +41,28 @@
   font-weight: bold;
   font-size: 34pt;
   margin-top: 16%;
+  font-family: Sans-Serif;
 }
 
 .title-slide h2 {
   font-weight: normal;
   color: #000000;
   font-size: 32pt
+  font-family: Sans-Serif;
 }
 
 .title-slide h3 {
   color: #000000;
   font-size: 30pt;
   font-weight: normal;
+  font-family: Sans-Serif;
 }
 
 .chapter-slide {
   background-image: url("./LatinR_LOGOS-23.png"), linear-gradient(to bottom, #5542FF 1%, rgba(85, 66, 255) 95%) ;
   background-position: 10px 590px , center;
   background-size: 0px, cover ;
+  font-family: Sans-Serif;
 }
 
 .chapter-slide h1 {
@@ -63,11 +72,13 @@
   text-align: left;
   color: #ECECEC;
   font-size: 34pt;
+  font-family: Sans-Serif;
 }
 
 .chapter-slide h2 {
   font-size: 32pt;
   color: #ffffff ;
+  font-family: Sans-Serif;
 }
 
 /* Two-column layout */
@@ -92,4 +103,10 @@
   float: right;
   width: 47%;
   margin-top: -30px;
+}
+
+.remark-code, .remark-inline-code {
+  font-size: 20pt;
+  font-family: Sans-Serif;
+
 }
