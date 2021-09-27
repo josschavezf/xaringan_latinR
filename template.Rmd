@@ -2,7 +2,7 @@
 title: "Título de tu presentación"
 subtitle: "⚔<br/>usando xaringan"
 author: "Tu nombre"
-institute: "Latin R 2021"
+institute: "LatinR 2021"
 date: "10-12 de noviembre de 2021"
 output:
   xaringan::moon_reader:
